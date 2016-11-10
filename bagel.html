@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Bagel Game</title>
-	</head>
-	<body>
 
-		<h1>Bagel Game </h1>
+<head>
+	<meta charset="utf-8">
+	<title>Bagels Game</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+</head>
+
+<body>
+	<div class="container">
+
+
+
+		<h1>Bagels Game </h1>
 
 		<p>
-     The computer generates a three digit number where each digit must be unique. You are provided with 20 turns to guess the number.
-		 The computer can give the following hints in response to each guess:
-<div>
+			Lets play: The computer generates a three digit number where each digit must be unique. You are provided with 20 turns to guess the number. The computer can give the following hints in response to each guess:
+			<div>
 
-    <li>Pico: One digit is correct but in the wrong place.</li>
-    <li>Fermi: One digit is correct and in the right place.</li>
-    <li>Bagels: No digits are correct.</li>
+				<li>Pico: One digit is correct but in the wrong place.</li>
+				<li>Fermi: One digit is correct and in the right place.</li>
+				<li>Bagels: No digits are correct.</li>
+				<hr>
 
+				<div>
 
+					<input type="text" class ="input-sm" maxlength="1" id="guessNum1" >
+					<input type="text" class ="input-sm" maxlength="1" id="guessNum2" >
+					<input type="text" class ="input-sm" maxlength="1" id="guessNum3" >
 
-<button onclick="bagelBtn()">Try it</button>
+					<button onclick="bagelBtn()">Guess</button>
+				</div>
 
-<div>
-	<input type="text" id="guessNum" placeholder="type your guess here">
-</div>
+				<p id="randomNum">
+				</p>
 
-<p id="randomNum">
-
-</p>
-</div>
-</p>
+			</div>
+		</p>
 
 		<script type="text/javascript" src="bagel.js"></script>
-	</body>
+		<div class="guesses">
+			<!-- Here will insert the guesses-->
+
+		</div>
+	</div>
+</body>
+
 </html>
