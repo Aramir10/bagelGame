@@ -22,6 +22,8 @@ function getRandomNum() {
 
 	return Math.floor(Math.random() *10)
 }
+
+
 function startGame() {
 	//choose 3 unique numbers
 
