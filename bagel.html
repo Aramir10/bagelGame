@@ -26,9 +26,9 @@
 
 				<div>
 
-					<input type="number" min="1" max="10" class ="input-sm" maxlength="1" id="guessNum1" >
-					<input type="number" min="1" max="10" class ="input-sm" maxlength="1" id="guessNum2" >
-					<input type="number" min="1" max="10" class ="input-sm" maxlength="1" id="guessNum3" >
+					<input type="number" min="0" max="9" class ="input-sm" maxlength="1" id="guessNum1" >
+					<input type="number" min="0" max="9" class ="input-sm" maxlength="1" id="guessNum2" >
+					<input type="number" min="0" max="9" class ="input-sm" maxlength="1" id="guessNum3" >
 
 					<button onclick="startGame" id = "guessButn">Guess</button>
 				</div>
@@ -40,32 +40,7 @@
 
 		<script type="text/javascript" src="bagel.js"></script>
 		<div class="guesses">
-			<script>
 
-			<!-- Here will insert the guesses-->
-document.getElementById('addForm').addEventListener('submit', function(e) {
-				 e.preventDefault();
-				 var number1 = document.getElementById('guessNum1').value;
-				 var number2 = document.getElementById('guessNum2').value;
-				 var number3 = document.getElementById('guessNum3').value;
-				 var userGuess =[number1, number2, number3]
-				 alert('Your number Guess is  ' + userGuess );
-		 });
-
-
-
-		 //
-		 // 			function getUserGuess(){
-		 // 				var playerNum = [guessDigit1, guessDigit2, guessDigit3];
-		 //
-		 // // create a function to get user numbers
-		 // 		 	 guessDigit1 = document.getElementById("guessNum1").value;
-		 // 		 	 guessDigit2 = document.getElementById("guessNum2").value;
-		 // 		 	 guessDigit3 = document.getElementById("guessNum3").value;
-		 // 		 alert(playerNum)};
-		 // document.getElementById("playerGuess").innerHTML = playerNum;
-
-</script>
 		</div>
 	</div>
 	<!-- <p id="playerGuess"></p> -->
