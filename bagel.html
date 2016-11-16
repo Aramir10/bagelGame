@@ -24,16 +24,18 @@
 				<hr>
 				<form id="addForm">
 
-				<div>
+					<div>
 
-					<input type="number" min="0" max="9" class ="input-sm" maxlength="1" id="guessNum1" >
-					<input type="number" min="0" max="9" class ="input-sm" maxlength="1" id="guessNum2" >
-					<input type="number" min="0" max="9" class ="input-sm" maxlength="1" id="guessNum3" >
+						<input type="number" min="0" max="9" class="input-sm" maxlength="1" id="guessNum1">
+						<input type="number" min="0" max="9" class="input-sm" maxlength="1" id="guessNum2">
+						<input type="number" min="0" max="9" class="input-sm" maxlength="1" id="guessNum3">
 
-					<button onclick="startGame" id = "guessButn">Guess</button>
-				</div>
 
-</form>
+						<button onclick="compareUsrvsCom()" id="guessButn">Guess</button>
+					</div>
+					<hr>
+					<p id="demoBagel"><strong> You have:</strong></p>
+				</form>
 
 			</div>
 		</p>

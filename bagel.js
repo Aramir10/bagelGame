@@ -9,60 +9,61 @@
 // var compChoice3 = Math.floor(Math.random() * 10);
 // var computerNum = [compChoice1, compChoice2, compChoice3];
 // alert(computerNum);
-confirm("Are you ready to play Bagels");
+confirm("Are you ready to play Bagels?");
 // global
 var compChoice1, compChoice2, compChoice3;
-var number1, number2, number3
+var number1, number2, number3;
 
 function getRandomNum() {
-	return Math.floor(Math.random() *10)}
-
+    return Math.floor(Math.random() * 10)
+    }
 function startGame() {
-	//here the computer will choose 3 unique numbers creating Arrray
-	do{
-		var computerNum = [compChoice1, compChoice2, compChoice3];
-		compChoice1 = getRandomNum();
-		compChoice2 = getRandomNum();
-		compChoice3 = getRandomNum();
-	}while (compChoice1 == compChoice2 || compChoice1 == compChoice3 || compChoice2 == compChoice3);
-};
+    //here the computer will choose 3 unique numbers creating Arrray
+    do {
+        var computerNum = [compChoice1, compChoice2, compChoice3];
+        compChoice1 = getRandomNum();
+        compChoice2 = getRandomNum();
+        compChoice3 = getRandomNum();
+    } while (compChoice1 == compChoice2 || compChoice1 == compChoice3 || compChoice2 == compChoice3);
+    }
 
-startGame();{
- var computerNum = [compChoice1, compChoice2, compChoice3];
- alert("The computer has choosen, enter your guess    "  +  computerNum );
-}
+startGame()
 //Here will get the users input values
-
 document.getElementById('addForm').addEventListener('submit', function(e) {
-	 e.preventDefault();
-	 var number1 = document.getElementById('guessNum1').value;
-	 var number2 = document.getElementById('guessNum2').value;
-	 var number3 = document.getElementById('guessNum3').value;
-	 var computerNum = [compChoice1, compChoice2, compChoice3];
-	 var userGuess = [number1, number2, number3]
-	 alert('Your number Guess is  '+ userGuess + "And the computer guess   "  + computerNum  );
-// compare values
-		
+            e.preventDefault();
+            number1 = document.getElementById('guessNum1').value;
+            number2 = document.getElementById('guessNum2').value;
+            number3 = document.getElementById('guessNum3').value;
+            var computerNum = [compChoice1, compChoice2, compChoice3];
+            var userGuess = [number1, number2, number3]
+            alert('Your number Guess is  ' + userGuess + "And the computer guess   " + computerNum);
+            console.log(computerNum);
+						// compare values
+            });
+
+
+function compareUsrvsCom() {
+
+    var response = "";
+
+    if (number1 == compChoice1) response += "pico  ";
+    else if (number1 == compChoice2 || number1 == compChoice3) response += "fermi  ";
+
+    if (number2 == compChoice2) response += "pico  ";
+    else if (number2 == compChoice1 || compChoice2 == compChoice3) response += "fermi  ";
+
+    if (number3 == compChoice3) response += "pico  ";
+    else if (number3 == compChoice1 || number3 == compChoice2) response += "fermi  ";
+
+    if (number1 === compChoice1 && number2 === compChoice2 && number3 === compChoice3) response = "You win";
+     else return "";
+    return response;
+
+}
+document.getElementById("guessButn").addEventListener("click", compareUsrvsCom(){
+document.getElementById("demoBagel").innerHTML = response;
 });
-
-// comparte varibales and use consolelog
-// if (computerNum === userGuess){
-//alert("you won");}
-
-
- 		 //
- 		 // 			function getUserGuess(){
- 		 // 				var playerNum = [guessDigit1, guessDigit2, guessDigit3];
- 		 //
- 		 // // create a function to get user numbers
- 		 // 		 	 guessDigit1 = document.getElementById("guessNum1").value;
- 		 // 		 	 guessDigit2 = document.getElementById("guessNum2").value;
- 		 // 		 	 guessDigit3 = document.getElementById("guessNum3").value;
- 		 // 		 alert(playerNum)};
- 		 // document.getElementById("playerGuess").innerHTML = playerNum;
-
-
-
+console.log(compareUsrvsCom());
 // function getUserGuess(){
 // 	var playerNum = [guessDigit1, guessDigit2, guessDigit3];
 //
