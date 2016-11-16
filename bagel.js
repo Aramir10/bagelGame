@@ -1,10 +1,4 @@
 
-//
-// function bagelBtn() {
-// var v = Math.floor((Math.random() * 999) + 100);
-//     document.getElementById("randomNum").innerHTML = v;
-// };
-
 //create a random number for the computer decision
 //pull our numbers from text
 // validate agaist what number the computer is thinking of
@@ -15,11 +9,14 @@
 // var compChoice3 = Math.floor(Math.random() * 10);
 // var computerNum = [compChoice1, compChoice2, compChoice3];
 // alert(computerNum);
+confirm("Are you ready to play Bagels");
+// global
 var compChoice1, compChoice2, compChoice3;
+var number1, number2, number3
 
 function getRandomNum() {
-	return Math.floor(Math.random() *10)
-}
+	return Math.floor(Math.random() *10)}
+
 function startGame() {
 	//here the computer will choose 3 unique numbers creating Arrray
 	do{
@@ -27,16 +24,14 @@ function startGame() {
 		compChoice1 = getRandomNum();
 		compChoice2 = getRandomNum();
 		compChoice3 = getRandomNum();
-	}while (compChoice1 === compChoice2 || compChoice1 === compChoice3 || compChoice2=== compChoice3);
+	}while (compChoice1 == compChoice2 || compChoice1 == compChoice3 || compChoice2 == compChoice3);
 };
 
 startGame();{
  var computerNum = [compChoice1, compChoice2, compChoice3];
- alert("The computer has choosen, enter your guess"  +  computerNum );
-
-
-
-<!--Here will get the users input values-->
+ alert("The computer has choosen, enter your guess    "  +  computerNum );
+}
+//Here will get the users input values
 
 document.getElementById('addForm').addEventListener('submit', function(e) {
 	 e.preventDefault();
@@ -44,13 +39,12 @@ document.getElementById('addForm').addEventListener('submit', function(e) {
 	 var number2 = document.getElementById('guessNum2').value;
 	 var number3 = document.getElementById('guessNum3').value;
 	 var computerNum = [compChoice1, compChoice2, compChoice3];
-	 var userGuess =[number1, number2, number3]
-	 alert('Your number Guess is  '+ userGuess + "And the computer guess"  + computerNum  );
-	  if (userGuess === computerNum){
-	 alert("you win" );}
+	 var userGuess = [number1, number2, number3]
+	 alert('Your number Guess is  '+ userGuess + "And the computer guess   "  + computerNum  );
+// compare values
+		
 });
-}
-<!-- Here will insert the guesses-->
+
 // comparte varibales and use consolelog
 // if (computerNum === userGuess){
 //alert("you won");}
