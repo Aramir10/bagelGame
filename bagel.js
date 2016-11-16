@@ -58,12 +58,15 @@ function compareUsrvsCom() {
     if (number1 === compChoice1 && number2 === compChoice2 && number3 === compChoice3) response = "You win";
      else return "";
     return response;
-
+		console.log(response);
+		document.getElementById("guessButn").addEventListener("click", function(){
+		document.getElementById("demoBagel").innerHTML = response;
+		});
 }
-document.getElementById("guessButn").addEventListener("click", compareUsrvsCom(){
-document.getElementById("demoBagel").innerHTML = response;
-});
-console.log(compareUsrvsCom());
+
+
+
+console.log(compareUsrvsCom())
 // function getUserGuess(){
 // 	var playerNum = [guessDigit1, guessDigit2, guessDigit3];
 //
