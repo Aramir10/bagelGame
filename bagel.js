@@ -17,6 +17,7 @@ function getRandomNum() {
 
 var compChoice1, compChoice2, compChoice3;
 var number1, number2, number3;
+var response
 
 
 function startGame(){
@@ -40,11 +41,12 @@ function userNum(){
   number3 = document.getElementById('guessNum3').value;
     console.log(number1,number2,number3);
 }
-document.getElementById('addForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-     userNum();
-    console.log(number1,number2,number3);
-    });
+//
+// document.getElementById('addForm').addEventListener('submit', function(e) {
+//     e.preventDefault();
+//      userNum();
+//     console.log(number1,number2,number3);
+//     });
 
 
 function compareUsrvsCom(){
@@ -61,13 +63,15 @@ function compareUsrvsCom(){
     else if (number3 == compChoice1 || number3 == compChoice2) response += "fermi  ";
 
     if (number1 === compChoice1 && number2 === compChoice2 && number3 === compChoice3) response = "You win";
-    else return "";
-    return response;
+    else return response;
+    // return response;
+    console.log(reponse);
    }
 
 
    document.getElementById("guessButn").addEventListener("click", function() {
      userNum();
      compareUsrvsCom();
+     console.log(compareUsrvsCom());
        document.getElementById("demoBagel").innerHTML += response;
      });
