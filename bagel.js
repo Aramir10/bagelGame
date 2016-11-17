@@ -35,18 +35,19 @@ document.getElementById('startGame').addEventListener('click', function() {
 
 
 function userNum(){
-    document.getElementById('guessNum1').value = number1;
-    document.getElementById('guessNum2').value = number2;
-    document.getElementById('guessNum3').value = number3;
+  number1 = document.getElementById('guessNum1').value;
+  number2 = document.getElementById('guessNum2').value;
+  number3 = document.getElementById('guessNum3').value;
+    console.log(number1,number2,number3);
 }
 document.getElementById('addForm').addEventListener('submit', function(e) {
     e.preventDefault();
-
+     userNum();
     console.log(number1,number2,number3);
     });
 
 
-function compareUsrvsCom() {
+function compareUsrvsCom(){
 
     var response = "";
 
@@ -62,25 +63,11 @@ function compareUsrvsCom() {
     if (number1 === compChoice1 && number2 === compChoice2 && number3 === compChoice3) response = "You win";
     else return "";
     return response;
-    console.log(response);
-    document.getElementById("guessButn").addEventListener("click", function() {
-        document.getElementById("demoBagel").innerHTML = response;
-        console.log(compareUsrvsCom());
-    });
-}
+   }
 
-// function getUserGuess(){
-// 	var playerNum = [guessDigit1, guessDigit2, guessDigit3];
-//
-//   document.getElementById("guessBtn").addEventListener.("click", function(e){
-//    e.preventDefault();
-// 	 guessDigit1 = document.getElementById("guessNum1").value;
-// 	 guessDigit2 = document.getElementById("guessNum2").value;
-// 	 guessDigit3 = document.getElementById("guessNum3").value;
-// alert(playerNum)};
-// matchGuess();
-//
-// guessDigit1 === compChoice1
-// guessDigit1===compChoice1
-// guessDigit1===compChoice1
-// });
+
+   document.getElementById("guessButn").addEventListener("click", function() {
+     userNum();
+     compareUsrvsCom();
+       document.getElementById("demoBagel").innerHTML += response;
+     });
