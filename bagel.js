@@ -19,8 +19,8 @@ var compChoice1, compChoice2, compChoice3;
 var number1, number2, number3;
 
 
-function startGame() {
-    do {
+function startGame(){
+    do{
         compChoice1 = getRandomNum();
         compChoice2 = getRandomNum();
         compChoice3 = getRandomNum();
@@ -30,19 +30,23 @@ function startGame() {
 
 document.getElementById('startGame').addEventListener('click', function() {
     startGame();
-    console.log();
+    console.log(compChoice1,compChoice2, compChoice3);
 });
 
 
+function userNum(){
+    document.getElementById('guessNum1').value = number1;
+    document.getElementById('guessNum2').value = number2;
+    document.getElementById('guessNum3').value = number3;
+}
+document.getElementById('addForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    console.log(number1,number2,number3);
+    });
+
 
 function compareUsrvsCom() {
-  //Here will get the users input values
-  document.getElementById('addForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      number1 = document.getElementById('guessNum1').value;
-      number2 = document.getElementById('guessNum2').value;
-      number3 = document.getElementById('guessNum3').value;
-      alert('Your number Guess is  ' +  + "And the computer guess   " + )});
 
     var response = "";
 
