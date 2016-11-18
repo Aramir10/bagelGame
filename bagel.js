@@ -1,24 +1,11 @@
-//create a random number for the computer decision
-//pull our numbers from text
-// validate agaist what number the computer is thinking of
-//give us a response according to wich digts we have corrent
-
-// var compChoice1 = Math.floor(Math.random() * 10);
-// var compChoice2 = Math.floor(Math.random() * 10);
-// var compChoice3 = Math.floor(Math.random() * 10);
-// var computerNum = [compChoice1, compChoice2, compChoice3];
-// alert(computerNum);
-
-// global
+// global V
+var compChoice1, compChoice2, compChoice3;
+var number1, number2, number3;
+var response;
+//functions to create random numbers
 function getRandomNum() {
     return Math.floor(Math.random() * 10)
 }
-
-
-var compChoice1, compChoice2, compChoice3;
-var number1, number2, number3;
-var response
-
 
 function startGame(){
     do{
@@ -28,27 +15,20 @@ function startGame(){
     }
     while (compChoice1 == compChoice2 || compChoice1 == compChoice3 || compChoice2 == compChoice3);
 }
-
+//Start game Btn
 document.getElementById('startGame').addEventListener('click', function() {
     startGame();
     console.log(compChoice1,compChoice2, compChoice3);
 });
 
-
+//here we'll get the usr Numnber
 function userNum(){
   number1 = document.getElementById('guessNum1').value;
   number2 = document.getElementById('guessNum2').value;
   number3 = document.getElementById('guessNum3').value;
     console.log(number1,number2,number3);
 }
-//
-// document.getElementById('addForm').addEventListener('submit', function(e) {
-//     e.preventDefault();
-//      userNum();
-//     console.log(number1,number2,number3);
-//     });
-
-
+// Compare Usr numbers vs computer ramdom nums
 function compareUsrvsCom(){
 
     var response = "";
@@ -65,7 +45,7 @@ function compareUsrvsCom(){
     if (number1 === compChoice1 && number2 === compChoice2 && number3 === compChoice3) response = "You win";
     else return response;
     // return response;
-    console.log(reponse);
+
    }
 
 
@@ -73,5 +53,5 @@ function compareUsrvsCom(){
      userNum();
      compareUsrvsCom();
      console.log(compareUsrvsCom());
-       document.getElementById("demoBagel").innerHTML += response;
+       document.getElementById("demoBagel").innerHTML += compareUsrvsCom();
      });
