@@ -22,7 +22,7 @@ function userNum(){
    number1 = parseInt(document.getElementById('guessNum1').value);
    number2 = parseInt(document.getElementById('guessNum2').value);
    number3 = parseInt(document.getElementById('guessNum3').value);
-   console.log(number1,number2,number3, typeof number1);
+   console.log(number1,number2,number3);
 }
 // Compare Usr numbers vs computer ramdom nums
 function compareUsrvsCom(){
@@ -30,21 +30,21 @@ function compareUsrvsCom(){
     var response = "";
 
 
-    if (number1 === compChoice1) response += "pico  ";
-    else if (number1 === compChoice2 || number1 == compChoice3) response += "fermi  ";
+    if (number1 === compChoice1) response = "fermi  ";
+    else if (number1 === compChoice2 || number1 === compChoice3) response = "pico  ";
 
 
-    if (number2 === compChoice2) response += "pico  ";
-    else if (number2 === compChoice1 || number2 === compChoice3) response += "fermi  ";
+    if (number2 === compChoice2) response += "fermi  ";
+    else if (number2 === compChoice1 || number2 === compChoice3) response += "pico  ";
 
 
-    if (number3 === compChoice3) response += "pico  ";
-    else if (number3 === compChoice1 || number3 === compChoice2) response += "fermi  ";
+    if (number3 === compChoice3) response += "fermi  ";
+    else if (number3 === compChoice1 || number3 === compChoice2) response += "pico  ";
 
 
 
 
-    if (number1 === compChoice1 && number2 === compChoice2 && number3 === compChoice3) response = "You win";
+    if (number1 === compChoice1 && number2 === compChoice2 && number3 === compChoice3) response = "You Win!!!";
     else if (response == "" ) return ("beagls   ")
 
 
@@ -54,6 +54,7 @@ function compareUsrvsCom(){
    //Start game Btn
    document.getElementById('startGame').addEventListener('click', function() {
        startGame();
+     var hint = "  This is a hint"
        console.log(compChoice1,compChoice2, compChoice3);
    });
 
@@ -61,5 +62,5 @@ function compareUsrvsCom(){
      userNum();
      compareUsrvsCom();
      console.log(compareUsrvsCom());
-       document.getElementById("demoBagel").innerHTML += compareUsrvsCom();
+       document.getElementById("demoBagel").innerHTML = compareUsrvsCom();
      });
